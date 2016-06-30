@@ -7,7 +7,8 @@
 * group_description 组的描述
 * group_remove 组是否被解散
 * group_users 组的用户 `["xxx-xxx","xxx-xxx"]`
-* group_date 群/多人对话表更新时间
+* update_dt 群/多人对话表更新时间
+* create_dt 群/多人对话表创建时间
 
 注：
 
@@ -20,7 +21,6 @@
 * group_id  组id
 * user_id 用户id
 * exit_group 是否退出群
-
 
 ## 群消息表
 
@@ -38,7 +38,8 @@
 * user_description 用户的描述
 * user_groups 用户的组 `["xxx-xxx","xxx-xxx"]`
 * user_friends 用户的好友  `["xxx-xxx","xxx-xxx"]`
-* user_date 用户表更新时间
+* upadte_dt 用户表更新时间
+* create_dt 用户表创建时间
 
 ## 两人对话消息表
 
@@ -46,6 +47,7 @@
 * user_friends 两人对话的用户 `["xxx-xxx","xxx-xxx"]`
 * msg_content 消息内容
 * msg_date 消息时间
+* user_id 发送者
 
 ## 注：
 
