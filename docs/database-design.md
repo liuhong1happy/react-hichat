@@ -15,13 +15,6 @@
 1. 多人会话只剩两人时，有一人退出会话，则会话解散。
 2. 群可以搜到，多人会话不能被搜索到。
 
-## 群/多人会话用户关联表
-
-* group_user_id 关联id
-* group_id  组id
-* user_id 用户id
-* exit_group 是否退出群
-
 ## 群消息表
 
 * msg_id 消息id
@@ -36,6 +29,7 @@
 * user_name 用户名
 * user_no 用户号 `用于搜索`
 * user_description 用户的描述
+* user_pwd 用户密码
 * user_groups 用户的组 `["xxx-xxx","xxx-xxx"]`
 * user_friends 用户的好友  `["xxx-xxx","xxx-xxx"]`
 * upadte_dt 用户表更新时间
