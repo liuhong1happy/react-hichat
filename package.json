@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "server": "node ./server/bin/www"
+    "server": "node ./server/bin/www",
+	"start": "watchify -o server/public/javascripts/index.js -v -d src/js/app.js",
+	"build": "browserify src/js/app.js -t [envify --NODE_ENV production] | uglifyjs -cm > server/public/javascripts/index.min.js",
+	"less":"lessc src/less/index.less  server/public/stylesheets/index.css",
   },
   "dependencies": {
     "body-parser": "~1.15.1",

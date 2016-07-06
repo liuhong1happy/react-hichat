@@ -1,0 +1,141 @@
+var AdminDispatcher = require('../dispatcher/AdminDispatcher');
+var AdminWebAPIUtils = require('../utils/AdminWebAPIUtils');
+
+module.exports = {
+    /*获取所有学校*/
+    getSchoolList:function(){
+        AdminWebAPIUtils.getSchoolList();
+    },
+    /*新增学校*/
+    postSchoolForm:function(formdata){
+    	AdminWebAPIUtils.postSchoolForm(formdata);
+    },
+     /*删除学校*/
+    deleteSchoolForm:function(school_id){
+        AdminWebAPIUtils.deleteSchoolForm(school_id);
+    },
+     /*修改学校*/
+    putSchoolForm:function(formdata){
+    	AdminWebAPIUtils.putSchoolForm(formdata);
+    },
+    /*获取所有学校管理员用户*/
+    getSchoolAdminList:function(school_id){
+        AdminWebAPIUtils.getSchoolAdminList(school_id);
+    },
+    /*新增学校管理员用户*/
+    postSchoolAdminForm:function(formdata){
+    	AdminWebAPIUtils.postSchoolAdminForm(formdata);
+    },   
+    /*删除学校管理员用户*/
+    deleteSchoolAdminUser:function(user_id,school_id){
+        AdminWebAPIUtils.deleteSchoolAdminUser(user_id,school_id);
+    },  
+    /*修改学校管理员用户*/
+    putSchoolAdminUser:function(formdata){
+    	AdminWebAPIUtils.putSchoolAdminUser(formdata);
+    },       
+    /*获取超级后台所有超级管理员用户*/
+    getSuperAdminList:function(){
+        AdminWebAPIUtils.getSuperAdminList();
+    },
+    /*新增超级管理员用户*/
+    postSuperAdminForm:function(formdata){
+    	AdminWebAPIUtils.postSuperAdminForm(formdata);
+    },   
+    /*删除学校管理员用户*/
+    deleteSuperAdminUser:function(user_id){
+        AdminWebAPIUtils.deleteSuperAdminUser(user_id);
+    },  
+    /*修改学校管理员用户*/
+    putSuperAdminUser:function(formdata){
+    	AdminWebAPIUtils.putSuperAdminUser(formdata);
+    },         
+
+    /*获取超级后台所有科目列表*/
+    getSubjectList:function(){
+        AdminWebAPIUtils.getSubjectList();
+    },
+    /**/
+    postSubjectForm:function(formdata){
+    	AdminWebAPIUtils.postSubjectForm(formdata);
+    },   
+    /*删除科目*/
+    deleteSubjectForm:function(subject_id){
+        AdminWebAPIUtils.deleteSubjectForm(subject_id);
+    },  
+    /*修改科目*/
+    putSubjectForm:function(formdata){
+    	AdminWebAPIUtils.putSubjectForm(formdata);
+    },   
+
+    /*获取所有年级*/
+    getGradeList:function(){
+        AdminWebAPIUtils.getGradeList();
+    },
+    /*新增年级*/
+    postGradeForm:function(formdata){
+    	AdminWebAPIUtils.postGradeForm(formdata);
+    },   
+    /*删除年级*/
+    deleteGradeForm:function(grade_id){
+        AdminWebAPIUtils.deleteGradeForm(grade_id);
+    },  
+    /*修改年级*/
+    putGradeForm:function(formdata){
+    	AdminWebAPIUtils.putGradeForm(formdata);
+    },      
+
+    /*获取所有出版社*/
+    getPublishList:function(){
+        AdminWebAPIUtils.getPublishList();
+    },
+    /*新增出版社*/
+    postPublishForm:function(formdata){
+    	AdminWebAPIUtils.postPublishForm(formdata);
+    },   
+    /*删除出版社*/
+    deletePublishForm:function(publish_id){
+        AdminWebAPIUtils.deletePublishForm(publish_id);
+    },  
+    /*修改出版社*/
+    putPublishForm:function(formdata){
+    	AdminWebAPIUtils.putPublishForm(formdata);
+    },    
+    
+
+    /*获取所有版本*/
+    getVersionList:function(){
+        AdminWebAPIUtils.getVersionList();
+    },
+    /*新增版本*/
+    postVersionForm:function(formdata){
+    	AdminWebAPIUtils.postVersionForm(formdata);
+    },   
+    /*删除版本*/
+    deleteVersionForm:function(version_id){
+        AdminWebAPIUtils.deleteVersionForm(version_id);
+    },  
+    /*修改版本*/
+    putVersionForm:function(formdata){
+    	AdminWebAPIUtils.putVersionForm(formdata);
+    }, 
+    
+    
+    
+    /*获取所有知识点*/
+    getVersionNodeList:function(formdata){
+        AdminWebAPIUtils.getVersionNodeList(formdata);
+    },
+    /*新增知识点*/
+    postVersionNodeForm:function(formdata){
+    	AdminWebAPIUtils.postVersionNodeForm(formdata);
+    },   
+    /*删除知识点*/
+    deleteVersionNodeForm:function(version_node_id){
+        AdminWebAPIUtils.deleteVersionNodeForm(version_node_id);
+    },  
+    /*修改知识点*/
+    putVersionNodeForm:function(formdata){
+    	AdminWebAPIUtils.putVersionNodeForm(formdata);
+    },             
+};
