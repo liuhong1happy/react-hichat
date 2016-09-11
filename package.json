@@ -6,17 +6,39 @@
     "server": "node ./server/bin/www",
     "start": "watchify -o server/public/javascripts/index.js -v -d src/js/app.js",
     "build": "browserify src/js/app.js -t [envify --NODE_ENV production] | uglifyjs -cm > server/public/javascripts/index.min.js",
-    "less": "lessc src/less/index.less  server/public/stylesheets/index.css"
+    "less": "watcher-lessc -i ./src/less/index.less -o server/public/stylesheets/index.min.css -d src/less -p ./src/less -f log.less -c"
   },
   "dependencies": {
-    "body-parser": "~1.15.1",
-    "cookie-parser": "~1.4.3",
+    "bluebird": "^3.4.6",
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
     "debug": "~2.2.0",
-    "ejs": "^2.4.2",
-    "express": "~4.13.4",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "include-all": "^0.1.6",
     "jade": "~1.11.0",
-    "mongoose": "^4.5.5",
-    "morgan": "~1.7.0",
-    "serve-favicon": "~2.3.0"
+    "mongoose": "^4.6.0",
+    "morgan": "^1.7.0",
+    "serve-favicon": "^2.3.0",
+    "socket.io": "^1.4.8"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "envify": "^3.4.1",
+    "reactify": "^1.1.1",
+    "uglifyjs": "^2.4.10",
+    "watcher-lessc": "^0.2.0",
+    "watchify": "^3.7.0"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "reactify",
+        {
+          "es6": true
+        }
+      ],
+      "envify"
+    ]
   }
 }

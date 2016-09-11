@@ -1,11 +1,11 @@
 'use strict';
-
+var path = require('path');
 module.exports = {
-  port:  process.env.PORT || 3000,
+  port:  process.env.PORT || 8080,
   mongo: {
-    uri: 'mongodb://localhost/admin',
+    uri: 'mongodb://localhost:27017/admin',
     options: {
-      	user:'mongo',          //生产环境用户名
+      	user:'admin',          //生产环境用户名
       	pass:'123456',           //生产环境密码
 		promiseLibrary: require('bluebird')
     }
@@ -15,5 +15,6 @@ module.exports = {
   },
   session:{
   	cookie:  {domain:'.jackhu.top',maxAge: 60000*5}
-  }
+  },
+  root: path.normalize(__dirname + '/../..')
 };

@@ -1,6 +1,6 @@
 'use strict';
 
-var mongoose = require('mongoose');
+var mongoose = require('../config/mongo');
 var Schema = mongoose.Schema;
 var crypto = require('crypto');
 
