@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "server": "node ./server/bin/www",
-    "build": "webpack --progress --profile --color --config webpack.pro.config.js",
+    "build": "webpack  --config webpack.pro.config.js --devtool cheap-module-source-map --progress --profile --color",
     "start": "webpack-dev-server --config webpack.dev.config.js --devtool eval --progress --hot --content-base build ",
     "less": "watcher-lessc -i ./src/less/index.less -o server/public/stylesheets/index.min.css -d src/less -p ./src/less -f log.less -c"
   },
@@ -42,6 +42,6 @@
     "url-loader": "^0.5.7",
     "webpack": "2.1.0-beta.4",
     "webpack-dev-server": "2.1.0-beta.4",
-    "watcher-lessc": "^0.2.0",
+    "watcher-lessc": "^0.2.0"
   }
 }
