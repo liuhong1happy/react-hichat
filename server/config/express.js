@@ -38,7 +38,7 @@ module.exports = function(app, express) {
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: false }));
     app.use(cookieParser());
-    app.use(express.static(path.join(settings.root + '/server/public')));
+    app.use('/static',express.static(path.join(settings.root + '/server/public')));
 
     
     // get all routes
@@ -46,7 +46,7 @@ module.exports = function(app, express) {
     
     // routes
     app.use('/', routes.index)
-        .use('/users', routes.users)
+        .use('/', routes.users)
         .use(function(req, res, next) {
             var err = new Error('Not Found');
             err.status = 404;

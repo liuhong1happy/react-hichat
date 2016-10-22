@@ -1,4 +1,4 @@
-var io = require('socket.io');
+import io from 'socket.io';
 
 
 var SocketIOUtils = {

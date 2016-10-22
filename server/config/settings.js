@@ -1,7 +1,7 @@
 'use strict';
 var path = require('path');
 module.exports = {
-  port:  process.env.PORT || 8080,
+  port:  process.env.PORT || 8081,
   mongo: {
     uri: 'mongodb://localhost:27017/admin',
     options: {

@@ -1,14 +1,13 @@
-var AdminApp = require('./components/AdminApp.react');
-var AdminWebAPIUtils = require('./utils/AdminWebAPIUtils');
+import index from '../less/index.less';
 
-var DateTimeAPIUtils = require('./utils/DateTimeAPIUtils');
-var SocketIOUtils = require('./utils/SocketIOUtils');
-var React = require('react');
-var ReactDOM = require('react-dom');
+import ChatApp from './components/ChatApp.react';
 
-window.React = React;
+import DateTimeAPIUtils from  './utils/DateTimeAPIUtils';
+//import SocketIOUtils from './utils/SocketIOUtils';
+import React from  'react';
+import ReactDOM from 'react-dom';
 
 DateTimeAPIUtils.init();
-SocketIOUtils.init();
+ //SocketIOUtils.init();
 
-ReactDOM.render(<AdminApp/>,document.getElementById("react-container"));
+ReactDOM.render(<ChatApp/>,document.getElementById("react-container"));

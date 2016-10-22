@@ -1,8 +1,8 @@
-'use strict';
+var express = require('express');
+var router = express.Router();
 
-module.exports = function(app) {
-    app.use('/users', require('./user'));
-	app.use('/', function (req,res,next) {
-			res.render('index', { title: 'Express' });
-	})
-};
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'React HiChat' });
+});
+
+module.exports = router;
