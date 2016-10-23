@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {Router,Route,Link,RouteHistory} from './base/react-router';
 
 import LoginPage from './pages/LoginPage.react';
+import IndexPage from './pages/IndexPage.react';
 import LightBlueTheme from './base/LightBlueTheme';
 
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
@@ -25,8 +26,9 @@ class AppProvider extends Component{
 class RouterApp extends Component{
     render(){
         return (
-                <Router  defaultRoute="/login" path="/" component={AppProvider}>
+                <Router  defaultRoute="/index" path="/" component={AppProvider}>
                         <Route path="login" component={LoginPage}></Route>
+                        <Route path="index" component={IndexPage}></Route>
                 </Router>
             )
     }

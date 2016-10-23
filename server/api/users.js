@@ -10,7 +10,8 @@ var userLogin = function(req, res, next) {
             status: "success",
             msg: "success",
             data: {
-                username: "admin",
+                userId:"123456789",
+                name: "admin",
                 sex: "F",
                 age: 24
             }

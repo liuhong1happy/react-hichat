@@ -5,24 +5,25 @@
   "repository": "git@github.com:liuhong1happy/react-hichat.git",
   "main": "src/js/app.js",
   "dependencies": {
-    
-    "material-ui": "^0.16.1",
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2",
-    "react-tap-event-plugin": "^1.0.0",
-    "socket.io": "^1.5.0",
     "bluebird": "^3.4.6",
     "body-parser": "^1.15.2",
+    "connect-multiparty": "^2.0.0",
     "cookie-parser": "^1.4.3",
     "debug": "~2.2.0",
     "ejs": "^2.5.2",
     "express": "^4.14.0",
+    "flux": "^3.1.0",
     "include-all": "^0.1.6",
     "jade": "~1.11.0",
+    "keymirror": "^0.1.1",
+    "material-ui": "^0.16.1",
     "mongoose": "^4.6.0",
     "morgan": "^1.7.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-tap-event-plugin": "^1.0.0",
     "serve-favicon": "^2.3.0",
-    "connect-multiparty": "^2.0.0"
+    "socket.io": "^1.5.0"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
